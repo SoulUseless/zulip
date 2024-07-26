@@ -124,7 +124,7 @@ if __name__ == "__main__":
     HAS_SECRETS = os.access("/etc/zulip/zulip-secrets.conf", os.R_OK)
 
     print(PRODUCTION)
-    print(HAS_SECRETS)
+    print(not HAS_SECRETS)
 
     if PRODUCTION and not HAS_SECRETS:
         # The best way to detect running manage.py as another user in
