@@ -123,6 +123,9 @@ if __name__ == "__main__":
     PRODUCTION = config_file.has_option("machine", "deploy_type")
     HAS_SECRETS = os.access("/etc/zulip/zulip-secrets.conf", os.R_OK)
 
+    print(PRODUCTION)
+    print(HAS_SECRETS)
+
     if PRODUCTION and not HAS_SECRETS:
         # The best way to detect running manage.py as another user in
         # production before importing anything that would require that
