@@ -6,8 +6,8 @@
 -r pip.in
 
 # Django itself
-Django[argon2]==5.0.*
-asgiref<3.8.0  # Breaks with https://github.com/django/asgiref/pull/367
+Django[argon2]>=5.0.8
+#asgiref<3.8.0  # Breaks with https://github.com/django/asgiref/pull/367
 
 # needed for NotRequired, ParamSpec
 typing-extensions
